@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8" />
+<title>Welcome Volunteers</title>
+<meta name="author" content="Haroon" />
+<meta name="description" content="Volunteer website" />
+<meta name="keywords" content="beijing, wuhan, volunteer" />
+<meta name="Resource-type" content="Document" />
+<link rel="icon" href="images/hola.png" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" href="style/css/fullpage.css" />
+<link rel="stylesheet" type="text/css" href="style/css/style.css" />
+<link rel="stylesheet" type="text/css" href="style/css/animate.css" />
+	
+
+<style type="text/css">
+  .sjqqapi_head_install, .sjqqapi_head_title_s, .sjqqapi_content_text, .sjqqapi_foot_info{color:#666;}
+</style>
+
+
+</head>
+
+<body>
+<!--Header-->
+<div class="header fixed">
+<div class="header_wrap">
+	<a href="index.html" class="logo" id="logo_w">Welcome Volunteers</a>
+	<div class="nav" id="nav_w">
+		<a href="index.html">Home</a>
+		<a href="introductionpage.html">Introduction</a>
+		<a href="#" target="_blank">Gallery</a>
+		<a href="#" target="_blank">News</a>
+		<a href="#" id="navList_bar">Login</a>
+	</div>
+</div>
+</div>
+<!--Menu-->
+<ul id="menu">
+	<li data-menuanchor="Hola" class="active"><a href="#Hola">1</a></li>
+</ul>
+<!--FullPage-->
+<div id="fullpage">
+<div class="section" id="section1">
+	<div class="homebg11">
+		<div class="container">
+			<div class="row">
+				<!--<img class="logo_title_cn" src="style/images/logo3.png"/> -->
+				<div class="content_cn">
+					<p style = "font-family:Broadway,garamond,serif;font-size:30px;font-style:normal;"> WORKING TOGETHER TO </p>
+					<p style = "font-family:Broadway,garamond,serif;font-size:30px;font-style:normal;"> DEFEAT COVID 19 OUTBREAK</p>
+				</div>
+			</div>
+		</div>
+		<div class="scope">
+
+   				 <h1>SCOPE</h1>
+   				 <p>This is a paragraph1</p>
+    			 <p>This is a paragraph1</p>
+
+		</div>
+				<div class="contents">
+
+   				  <h1>CONTENT</h1>
+   				 <p>This is a paragraph1</p>
+    			 <p>This is a paragraph1</p>
+
+		</div>
+				<div class="requirements">
+
+   				 <h1>REQUIREMENTS</h1>
+   				 <p>This is a paragraph3</p>
+    			 <p>This is a paragraph3</p>
+
+		</div>
+				<div class="registration">
+
+   				 <h1>REGISTRATION</h1>
+   				 <p>This is a paragraph4</p>
+    			 <p>This is a paragraph4</p>
+
+		</div>
+				<div class="display">
+
+   				 <h1>DISPLAY</h1>
+   				 <p>This is a paragraph5</p>
+    			 <p>This is a paragraph5</p>
+					
+		</div>
+				<div class="organizers">
+
+   				 <h1>ORGANIZERS</h1>
+   				 <p>This is a paragraph6</p>
+    			 <p>This is a paragraph6</p>
+
+		</div>
+		
+	</div>
+</div>
+</div>
+	
+
+<div class="mask"></div>
+
+
+	
+<script type="text/javascript" src="style/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="style/js/jquery-1.11.1-ui.min.js"></script>
+<script type="text/javascript" src="style/js/jquery.fullPage.min.js"></script>
+<script type="text/javascript">
+//resize
+var winIE = (navigator.userAgent.indexOf("Opera") == -1 && (document.getElementByIdx &&  document.documentElement.behaviorUrns))  ? true : false;
+function bodySize(){
+ if(winIE && document.documentElement.clientWidth) {
+  var obj = document.getElementsByTagName_r("body")[0].style;
+  obj.width = (document.documentElement.clientWidth < 760) ? "760px" : "100%";
+ }
+}
+function init(){
+	if(winIE) {
+		bodySize(); 
+	}
+}
+onload = init;
+if(winIE) { 
+	onresize = bodySize; 
+}
+
+//fullpage plugin
+$(function() {
+	$('#fullpage').fullpage({
+		sectionsColor: ['#0081DC', '#3D1B91', '#00b285', '#cacaca', '#000'],
+		anchors: ['Hola', 'Shine', 'T9', 'Customization', 'Gestures'],
+		menu :'#menu',
+		verticalCentered: false,
+		css3: true,
+		scrollingSpeed: 600,
+		//events
+		afterLoad:function(hola){ 
+		   if (hola == 'Customization') {
+				$('#logo_w').addClass('logo_grey');
+				$('.nav').addClass('nav_grey').removeClass('nav');
+				$('#menu li').addClass('grey');
+				$('.download_button a').addClass('grey');
+			} else {
+				$('#logo_w').removeClass('logo_grey');
+				$('.nav_grey').addClass('nav').removeClass('nav_grey');
+				$('#menu li').removeClass('grey');
+				$('.download_button a').removeClass('grey');
+			}
+		}
+	});
+});     
+</script>
+
+</body>
+</html>
